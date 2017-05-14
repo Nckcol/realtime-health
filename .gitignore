@@ -1,0 +1,8 @@
+.DS_STORE/
+.idea/
+node_modules/
+static/
+build/
+.module-cache
+*.log*
+_nogit

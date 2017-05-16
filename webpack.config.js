@@ -194,15 +194,18 @@ module.exports = function(env) {
   return {
     devtool: isProd ? 'source-map' : 'cheap-module-source-map',
     context: sourcePath,
+
     entry: {
       main: entryPoint,
     },
+
     output: {
       path: buildDirectory,
       publicPath: '/',
       filename: '[name]-[hash:8].js',
       chunkFilename: '[name]-[chunkhash:8].js',
     },
+
     module: {
       rules: [
         {
@@ -227,9 +230,13 @@ module.exports = function(env) {
         },
       ],
     },
+
     resolve: {
       extensions: ['.webpack-loader.js', '.web-loader.js', '.loader.js', '.js', '.jsx'],
-      modules: [path.resolve(__dirname, 'node_modules'), sourcePath],
+      modules: [
+        path.resolve(__dirname, 'node_modules'),
+        sourcePath
+      ],
     },
 
     plugins,

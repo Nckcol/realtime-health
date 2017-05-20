@@ -1,0 +1,12 @@
+.timeline {
+  flex: 1 1 auto;
+  height: 100%;
+}
+
+.item {
+  margin-bottom: 16px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

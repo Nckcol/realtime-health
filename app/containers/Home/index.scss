@@ -1,0 +1,47 @@
+.home {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.row {
+  flex: 0 1 auto;
+}
+
+.rowExpanded {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: stretch;
+  margin: -8px;
+}
+
+.title {
+  color: #333;
+}
+
+.activitiesHolder {
+  flex: 0 1 420px;
+  padding: 8px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.timelineHolder {
+  flex: 1 1 auto;
+  padding: 8px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.row {
+  margin-bottom: 16px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

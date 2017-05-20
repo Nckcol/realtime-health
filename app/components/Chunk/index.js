@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from "prop-types";
-import Loading from 'components/Loading';
+import Loading from 'components/Loader';
 
 class Chunk extends Component {
   static propTypes = {

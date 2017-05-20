@@ -113,6 +113,9 @@ module.exports = function(env) {
           },
         },
         {
+          loader: 'resolve-url-loader'
+        },
+        {
           loader: 'sass-loader',
           options: {
             outputStyle: 'collapsed',
@@ -145,10 +148,13 @@ module.exports = function(env) {
         },
       },
       {
+        loader: 'resolve-url-loader'
+      },
+      {
         loader: 'sass-loader',
         options: {
           outputStyle: 'expanded',
-          sourceMap: false,
+          sourceMap: true,
           includePaths: [sourcePath],
         },
       },
@@ -209,7 +215,7 @@ module.exports = function(env) {
     module: {
       rules: [
         {
-          test: /\.(html|svg|jpe?g|png|ttf|woff2?)$/,
+          test: /\.(html|svg|jpe?g|png)$/,
           exclude: /node_modules/,
           use: {
             loader: 'file-loader',
@@ -217,6 +223,28 @@ module.exports = function(env) {
               name: 'static/[name]-[hash:8].[ext]',
             },
           },
+        },
+        {
+          test: /\.woff$/,
+          use: {
+            loader: 'url-loader',
+            options: {
+              limit: 65000,
+              mimetype: "application/font-woff",
+              name: "static/fonts/[name].[ext]"
+            }
+          }
+        },
+        {
+          test: /\.woff2$/,
+          use: {
+            loader: 'url-loader',
+            options: {
+              limit: 65000,
+              mimetype: "application/font-woff2",
+              name: "static/fonts/[name].[ext]"
+            }
+          }
         },
         {
           test: /\.scss$/,

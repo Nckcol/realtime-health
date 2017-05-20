@@ -1,0 +1,21 @@
+@import "fonts/Lato/regular";
+@import "fonts/Lato/light";
+@import "fonts/Lato/bold";
+
+@import "fonts/Roboto/regular";
+@import "fonts/Roboto/light";
+@import "fonts/Roboto/bold";
+
+$font-lato: Lato, Arial, Helvetica, sans-serif;
+$font-roboto: Roboto, Arial, Helvetica, sans-serif;
+
+$font-size-base: 16px;
+
+$font-size-huge: 2.441em;
+$font-size-large: 1.953em;
+$font-size-big: 1.563em;
+$font-size-bigger: 1.25em;
+
+$font-size-smaller: 0.8em;
+$font-size-small: 0.64em;
+$font-size-tiny: 0.512em;

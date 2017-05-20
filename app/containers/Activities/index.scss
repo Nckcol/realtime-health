@@ -1,0 +1,63 @@
+@import "theme/colors";
+
+.activities {
+
+}
+
+
+.item {
+  margin-bottom: 16px;
+
+  &:last-child {
+    margin-bottom: 0px;
+  }
+}
+
+.inner {
+
+}
+
+.title {
+  text-transform: uppercase;
+  color: #464646;
+  font-size: 16px;
+  margin: 0 0 80px;
+  text-align: left;
+}
+
+.infoHolder {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  padding: 16px;
+  padding-left: 0;
+  box-sizing: border-box;
+  position: absolute;
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: 10px;
+    width: 0;
+    height: 100%;
+    top: 0;
+    box-shadow: 0 0 120px 100px $color-dark-grey;
+    z-index: 1;
+  }
+}
+
+.info {
+  position: relative;
+  z-index: 2;
+  text-align: right;
+}
+
+.units {
+  color: #464646;
+}
+
+.number {
+  font-size: 36px;
+  color: $color-radical-red;
+}

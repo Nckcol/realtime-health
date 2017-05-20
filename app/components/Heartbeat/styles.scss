@@ -1,0 +1,50 @@
+@import "theme/colors";
+
+$heartbeat-color: $color-red-violet;
+$heartbeat-size: 36px; // must be divisible by 2 and 3
+$heartbeat-rotation: rotate(45deg);
+
+.heartbeat {
+  animation: heartbeat 1300ms ease 0s infinite normal;
+
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  text-indent: -9999px;
+  width: $heartbeat-size;
+  height: $heartbeat-size;
+  transform: $heartbeat-rotation scale(1);
+  transform-origin: 50% 50%;
+
+  &:after, &:before {
+    position: absolute;
+    content: "";
+    background: $heartbeat-color;
+  }
+
+  &:before {
+    border-top-left-radius: ($heartbeat-size / 3);
+    border-bottom-left-radius: ($heartbeat-size / 3);
+    top: ($heartbeat-size/3);
+    left: 0;
+    width: $heartbeat-size;
+    height: (2 * $heartbeat-size / 3);
+  }
+
+  &:after {
+    border-top-left-radius: ($heartbeat-size / 3);
+    border-top-right-radius: ($heartbeat-size / 3);
+    top: 0;
+    left: ($heartbeat-size / 3);
+    width: (2 * $heartbeat-size / 3);
+    height: ($heartbeat-size / 3);
+  }
+}
+
+@keyframes heartbeat {
+  0%  { transform: $heartbeat-rotation scale(1);   }
+  14% { transform: $heartbeat-rotation scale(1.3); }
+  28% { transform: $heartbeat-rotation scale(1);   }
+  42% { transform: $heartbeat-rotation scale(1.3); }
+  70% { transform: $heartbeat-rotation scale(1);   }
+}

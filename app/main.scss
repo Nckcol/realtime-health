@@ -1,0 +1,51 @@
+@import "~normalize-scss/sass/_normalize.scss";
+
+@include normalize();
+
+/* Include media plugin */
+@import "~include-media/dist/_include-media.scss";
+
+$tiny: 320px;
+$iphone5: 320px;
+$iphone6: 375px;
+$iphone6p: 414px;
+$small: 480px;
+$medium: 760px;
+$ipad: 768px;
+$xmedium: 960px;
+$large: 1024px;
+$huge: 1200px;
+$vast: 1600px;
+
+$breakpoints: (
+  tiny: $tiny,
+  small: $small,
+  iphone6: $iphone6,
+  iphone6p: $iphone6p,
+  medium: $medium,
+  ipad: $ipad,
+  xmedium: $xmedium,
+  large: $large,
+  huge: $huge,
+  vast: $vast
+);
+
+@import "theme/colors";
+@import "theme/typography";
+
+html,
+body {
+  -webkit-overflow-scrolling: touch;
+  height: 100%;
+}
+
+body {
+  font-family: $font-lato;
+  font-size: $font-size-base;
+  line-height: 1.25;
+  color: $color-white;
+}
+
+:global(#root) {
+  height: 100%
+}

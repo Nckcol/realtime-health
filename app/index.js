@@ -8,8 +8,11 @@ import { AppContainer } from 'react-hot-loader';
 import App from 'containers/App';
 import store from 'store';
 
+import "./main.scss";
+
 import webstomp from "webstomp-client";
 
+/*
 let ws = new WebSocket(prompt("Web Socket address", "ws://localhost:8080/ws-api"));
 let client = webstomp.over(ws);
 
@@ -30,6 +33,7 @@ client.connect({}, (frame) => {
 }, (error) => {
   console.log(error);
 });
+*/
 
 const root = document.getElementById('root');
 const renderApp = Component => {
